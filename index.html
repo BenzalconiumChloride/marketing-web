@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Alex Rivera — Premium Auto Sales</title>
+<title>Ian Lopez Capuyan — Premium Auto Sales</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
   <div class="nav-inner">
     <a href="#" class="brand-logo">
       <div class="logo-icon"><i class="fas fa-bolt"></i></div>
-      Alex<em>Rivera</em>
+      Ian<em>Capuyan</em>
     </a>
     <ul class="nav-links">
       <li><a href="#hero">Home</a></li>
@@ -37,7 +37,6 @@
         </div>
       </li>
       <li><a href="#showroom">Inventory</a></li>
-      <li><a href="#calculator">Financing</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#testimonials">Reviews</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
@@ -47,7 +46,6 @@
   <div class="mob-menu" id="mobMenu">
     <a href="#hero" onclick="closeMob()">Home</a>
     <a href="#showroom" onclick="closeMob()">Inventory</a>
-    <a href="#calculator" onclick="closeMob()">Financing</a>
     <a href="#gallery" onclick="closeMob()">Gallery</a>
     <a href="#testimonials" onclick="closeMob()">Reviews</a>
     <a href="#contact" onclick="closeMob()">Contact</a>
@@ -59,38 +57,41 @@
     <a href="#showroom" onclick="filterBrand('Lexus');closeMob()">Lexus</a>
   </div>
 </nav>
- 
- 
-<!-- HERO -->
+
+
+<!-- HERO — full bleed background image -->
 <section id="hero">
-  <div class="hero-speedlines"></div>
+  <!-- Background: replace the URL below with your friend's actual photo -->
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-overlay-bottom"></div>
   <div class="hero-underglow"></div>
-  <div class="hero-strip"></div>
- 
+  <div class="hero-speedlines"></div>
+
   <div class="hero-inner">
     <div class="hero-text">
       <div class="hero-tag">
         <div class="tag-line"></div>
         <span class="tag-text">Premium Auto Sales · Iloilo, PH</span>
       </div>
- 
+
       <h1 class="hero-title">
         Meet<br>
-        <span class="red italic">Alex</span><br>
-        Rivera
+        <span class="red italic">Ian</span><br>
+        Capuyan
       </h1>
- 
+
       <p class="hero-subtitle">Certified Sales Professional &nbsp;·&nbsp; 8 Brands</p>
- 
+
       <div class="hero-rule">
         <div class="line"></div>
         <div class="dot"></div>
       </div>
- 
+
       <p class="hero-body">
-        With over <strong>12 years behind the wheel</strong> of premium auto sales, Alex connects drivers to their perfect machine — from rugged family SUVs to luxury performance sedans. <strong>No pressure. Pure expertise.</strong>
+        With over <strong>12 years behind the wheel</strong> of premium auto sales, Ian connects drivers to their perfect machine — from rugged family SUVs to luxury performance sedans. <strong>No pressure. Pure expertise.</strong>
       </p>
- 
+
       <div class="hero-stats">
         <div class="stat">
           <div class="stat-num"><span data-count="500">0</span><sup>+</sup></div>
@@ -105,34 +106,25 @@
           <div class="stat-label">Years Exp.</div>
         </div>
       </div>
- 
+
       <div class="hero-btns">
         <a href="#showroom" class="btn-red"><i class="fas fa-car"></i> Browse Cars</a>
         <a href="#contact" class="btn-ghost"><i class="fas fa-phone-alt"></i> Get in Touch</a>
       </div>
     </div>
- 
-    <div class="hero-photo-wrap">
-      <!-- Replace the div below with <img src="alex-photo.jpg" alt="Alex Rivera"> -->
-      <div class="hero-photo-frame">
-        <div class="hero-photo-placeholder">
-          <i class="fas fa-user-tie"></i>
-          <p>Place Photo Here</p>
-        </div>
-      </div>
-      <div class="verified-badge">
-        <div class="vb-icon"><i class="fas fa-shield-alt"></i></div>
-        <div class="vb-text">
-          <div class="vb-num">Verified</div>
-          <div class="vb-lbl">Certified Dealer</div>
-        </div>
-      </div>
-      <div class="tach-deco"><i class="fas fa-tachometer-alt" style="margin-right:6px;"></i>Top Performer</div>
+  </div>
+
+  <!-- Floating verified badge — always visible regardless of screen size -->
+  <div class="hero-badge">
+    <div class="vb-icon"><i class="fas fa-shield-alt"></i></div>
+    <div class="vb-text">
+      <div class="vb-num">Verified</div>
+      <div class="vb-lbl">Certified Dealer</div>
     </div>
   </div>
 </section>
- 
- 
+
+
 <!-- SHOWROOM -->
 <section id="showroom">
   <div class="sr-header">
@@ -140,9 +132,9 @@
       <div class="sec-tag"><div class="tl"></div><span class="tt">Car Showroom</span></div>
       <h2 class="sec-title">Current <span class="red">Inventory</span></h2>
     </div>
-    <p class="sec-desc">Hand-selected vehicles across every budget and lifestyle. Ask Alex for a test drive.</p>
+    <p class="sec-desc">Hand-selected vehicles across every budget and lifestyle. Ask Ian for a test drive.</p>
   </div>
- 
+
   <div class="brand-pills">
     <button class="brand-pill active" onclick="filterBrand('All')">All Brands</button>
     <button class="brand-pill" onclick="filterBrand('Toyota')">Toyota</button>
@@ -154,68 +146,21 @@
     <button class="brand-pill" onclick="filterBrand('Mercedes')">Mercedes</button>
     <button class="brand-pill" onclick="filterBrand('Lexus')">Lexus</button>
   </div>
- 
-  <!--
-    ═══════════════════════════════════════════════
-    CAR DATA — All car info is here in HTML.
-    Add a car: copy one <li> and change the values.
-    ═══════════════════════════════════════════════
-  -->
+
+  <!-- CAR DATA — simplified: brand, model, year, fuel, seats, price -->
   <ul id="car-data" aria-hidden="true">
- 
-    <li data-brand="Toyota"     data-model="Fortuner"       data-year="2024" data-category="SUV"
-        data-fuel="Diesel"      data-transmission="Automatic" data-seats="7 Seats"
-        data-price="₱2.1M"     data-badge="Best Seller"
-        data-img="https://images.unsplash.com/photo-1617531653332-bd46c16f4d68?w=900&q=85"></li>
- 
-    <li data-brand="Honda"      data-model="CR-V"           data-year="2024" data-category="SUV"
-        data-fuel="Gasoline"    data-transmission="CVT"       data-seats="5 Seats"
-        data-price="₱1.9M"     data-badge="New"
-        data-img="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=900&q=85"></li>
- 
-    <li data-brand="BMW"        data-model="3 Series"       data-year="2023" data-category="Sedan"
-        data-fuel="Gasoline"    data-transmission="Automatic" data-seats="5 Seats"
-        data-price="₱3.4M"     data-badge="Premium"
-        data-img="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&q=85"></li>
- 
-    <li data-brand="Mercedes"   data-model="C-Class"        data-year="2023" data-category="Sedan"
-        data-fuel="Gasoline"    data-transmission="Automatic" data-seats="5 Seats"
-        data-price="₱3.8M"     data-badge="Luxury"
-        data-img="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=900&q=85"></li>
- 
-    <li data-brand="Mitsubishi" data-model="Montero Sport"  data-year="2024" data-category="SUV"
-        data-fuel="Diesel"      data-transmission="Automatic" data-seats="7 Seats"
-        data-price="₱2.0M"     data-badge="Popular"
-        data-img="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=900&q=85"></li>
- 
-    <li data-brand="Nissan"     data-model="Terra"          data-year="2024" data-category="SUV"
-        data-fuel="Diesel"      data-transmission="Automatic" data-seats="7 Seats"
-        data-price="₱1.8M"     data-badge="New"
-        data-img="https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=900&q=85"></li>
- 
-    <li data-brand="Lexus"      data-model="RX 350"         data-year="2024" data-category="Luxury SUV"
-        data-fuel="Gasoline"    data-transmission="Automatic" data-seats="5 Seats"
-        data-price="₱4.5M"     data-badge="Flagship"
-        data-img="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=900&q=85"></li>
- 
-    <li data-brand="Ford"       data-model="Everest"        data-year="2024" data-category="SUV"
-        data-fuel="Diesel"      data-transmission="Automatic" data-seats="7 Seats"
-        data-price="₱2.2M"     data-badge="Popular"
-        data-img="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=900&q=85"></li>
- 
-    <li data-brand="Toyota"     data-model="Corolla Cross"  data-year="2024" data-category="Crossover"
-        data-fuel="Hybrid"      data-transmission="CVT"       data-seats="5 Seats"
-        data-price="₱1.6M"     data-badge="Eco"
-        data-img="https://images.unsplash.com/photo-1590362891991-f776e747a588?w=900&q=85"></li>
- 
-    <li data-brand="Honda"      data-model="Civic"          data-year="2024" data-category="Sedan"
-        data-fuel="Gasoline"    data-transmission="CVT"       data-seats="5 Seats"
-        data-price="₱1.5M"     data-badge="New"
-        data-img="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=900&q=85"></li>
- 
+    <!-- <li data-brand="Toyota"     data-model="Fortuner"       data-year="2024" data-fuel="Diesel"    data-seats="7 Seats"  data-price="₱2.1M" data-badge="Best Seller" data-img="https://images.unsplash.com/photo-1617531653332-bd46c16f4d68?w=900&q=85"></li> -->
+    <li data-brand="Honda"      data-model="CR-V"           data-year="2024" data-fuel="Gasoline"  data-seats="5 Seats"  data-price="₱1.9M" data-badge="New"         data-img="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=900&q=85"></li>
+    <li data-brand="BMW"        data-model="3 Series"       data-year="2023" data-fuel="Gasoline"  data-seats="5 Seats"  data-price="₱3.4M" data-badge="Premium"     data-img="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&q=85"></li>
+    <li data-brand="Mercedes"   data-model="C-Class"        data-year="2023" data-fuel="Gasoline"  data-seats="5 Seats"  data-price="₱3.8M" data-badge="Luxury"      data-img="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=900&q=85"></li>
+    <li data-brand="Mitsubishi" data-model="Montero Sport"  data-year="2024" data-fuel="Diesel"    data-seats="7 Seats"  data-price="₱2.0M" data-badge="Popular"     data-img="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=900&q=85"></li>
+    <li data-brand="Nissan"     data-model="Terra"          data-year="2024" data-fuel="Diesel"    data-seats="7 Seats"  data-price="₱1.8M" data-badge="New"         data-img="https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=900&q=85"></li>
+    <li data-brand="Lexus"      data-model="RX 350"         data-year="2024" data-fuel="Gasoline"  data-seats="5 Seats"  data-price="₱4.5M" data-badge="Flagship"    data-img="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=900&q=85"></li>
+    <li data-brand="Ford"       data-model="Everest"        data-year="2024" data-fuel="Diesel"    data-seats="7 Seats"  data-price="₱2.2M" data-badge="Popular"     data-img="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=900&q=85"></li>
+    <li data-brand="Toyota"     data-model="Corolla Cross"  data-year="2024" data-fuel="Hybrid"    data-seats="5 Seats"  data-price="₱1.6M" data-badge="Eco"         data-img="https://images.unsplash.com/photo-1590362891991-f776e747a588?w=900&q=85"></li>
+    <li data-brand="Honda"      data-model="Civic"          data-year="2024" data-fuel="Gasoline"  data-seats="5 Seats"  data-price="₱1.5M" data-badge="New"         data-img="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=900&q=85"></li>
   </ul>
-  <!-- ═══ END CAR DATA ═══ -->
- 
+
   <div class="sr-stage">
     <div class="spotlight" id="spotlight">
       <div class="spl-img">
@@ -227,6 +172,7 @@
           <div class="spl-brand" id="splBrand"></div>
           <div class="spl-model" id="splModel"></div>
           <div class="spl-year"  id="splYear"></div>
+          <!-- Simplified: just Fuel & Seats -->
           <div class="spl-specs" id="splSpecs"></div>
         </div>
         <div class="spl-price-row">
@@ -237,7 +183,7 @@
     </div>
     <div class="thumb-rail" id="thumbRail"></div>
   </div>
- 
+
   <div class="sr-nav">
     <div class="sr-arrows">
       <button class="sr-arr" id="showPrev"><i class="fas fa-chevron-left"></i></button>
@@ -246,60 +192,8 @@
     <div class="sr-count"><span id="showCurr">1</span> / <span id="showTotal">10</span></div>
   </div>
 </section>
- 
- 
-<!-- CALCULATOR -->
-<section id="calculator">
-  <div class="calc-container">
-    <div style="text-align:center;margin-bottom:48px;">
-      <div class="sec-tag" style="justify-content:center;"><div class="tl"></div><span class="tt">Smart Financing</span><div class="tl"></div></div>
-      <h2 class="sec-title">Loan <span class="red">Calculator</span></h2>
-      <p class="sec-desc" style="margin:0 auto;text-align:center;">Estimate your monthly payment. Adjust to your budget.</p>
-    </div>
-    <div class="calc-box carbon">
-      <div>
-        <div class="calc-fg">
-          <label>Car Price (₱)</label>
-          <input type="number" class="calc-inp" id="cPrice" value="1500000" placeholder="e.g. 1,500,000">
-        </div>
-        <div class="calc-fg">
-          <label>Down Payment (₱)</label>
-          <input type="number" class="calc-inp" id="cDown" value="300000" placeholder="e.g. 300,000">
-        </div>
-        <div class="calc-fg">
-          <div class="rl-row">
-            <label>Loan Term</label>
-            <span class="rv"><span id="termVal">36</span> months</span>
-          </div>
-          <input type="range" class="calc-range" id="rTerm" min="12" max="72" step="12" value="36">
-        </div>
-        <div class="calc-fg">
-          <div class="rl-row">
-            <label>Interest Rate</label>
-            <span class="rv"><span id="rateVal">8.0</span>% / yr</span>
-          </div>
-          <input type="range" class="calc-range" id="rRate" min="3" max="20" step="0.5" value="8">
-        </div>
-        <button class="btn-calc" onclick="calcLoan()">
-          <i class="fas fa-calculator" style="margin-right:8px;"></i>Calculate Payment
-        </button>
-      </div>
-      <div class="calc-res">
-        <div class="res-label">Monthly Payment</div>
-        <div class="res-amt" id="rMonthly"><span>₱</span> —</div>
-        <div class="res-grid" id="rGrid" style="display:none;">
-          <div class="res-item"><div class="rv" id="rLoan">—</div><div class="rk">Loan Amount</div></div>
-          <div class="res-item"><div class="rv" id="rInt">—</div><div class="rk">Total Interest</div></div>
-          <div class="res-item"><div class="rv" id="rTotal">—</div><div class="rk">Total Payment</div></div>
-          <div class="res-item"><div class="rv" id="rTerm2">—</div><div class="rk">Loan Term</div></div>
-        </div>
-        <div class="res-note">Estimates only. Contact Alex for exact bank rates and approval terms.</div>
-      </div>
-    </div>
-  </div>
-</section>
- 
- 
+
+
 <!-- GALLERY -->
 <section id="gallery">
   <div class="gallery-container">
@@ -308,53 +202,20 @@
         <div class="sec-tag"><div class="tl"></div><span class="tt">Visual Gallery</span></div>
         <h2 class="sec-title">Cars in <span class="red">Focus</span></h2>
       </div>
-      <p class="sec-desc" style="max-width:320px;text-align:right;">A curated visual showcase of the beautiful machines available through Alex.</p>
+      <p class="sec-desc" style="max-width:320px;text-align:right;">A curated visual showcase of the beautiful machines available through Ian.</p>
     </div>
- 
-    <!--
-      ═══════════════════════════════════════════════
-      GALLERY DATA — All photos live here in HTML.
-      Add a photo: copy one <figure> and update it.
-      ═══════════════════════════════════════════════
-    -->
     <div class="gallery-grid">
- 
-      <figure class="g-item">
-        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900&q=80" alt="BMW M4" loading="lazy">
-        <div class="g-overlay"><div class="g-overlay-txt">BMW M4<small>Sport Collection</small></div></div>
-      </figure>
- 
-      <figure class="g-item">
-        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&q=80" alt="BMW 3 Series" loading="lazy">
-        <div class="g-overlay"><div class="g-overlay-txt">BMW 3 Series<small>Executive Sedan</small></div></div>
-      </figure>
- 
-      <figure class="g-item">
-        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=900&q=80" alt="Honda CR-V" loading="lazy">
-        <div class="g-overlay"><div class="g-overlay-txt">Honda CR-V<small>Family SUV</small></div></div>
-      </figure>
- 
-      <figure class="g-item">
-        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=900&q=80" alt="Premium Sedan" loading="lazy">
-        <div class="g-overlay"><div class="g-overlay-txt">Premium Sedan<small>Luxury Line</small></div></div>
-      </figure>
- 
-      <figure class="g-item">
-        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=900&q=80" alt="Lexus RX" loading="lazy">
-        <div class="g-overlay"><div class="g-overlay-txt">Lexus RX<small>Flagship SUV</small></div></div>
-      </figure>
- 
-      <figure class="g-item">
-        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=900&q=80" alt="Mercedes C-Class" loading="lazy">
-        <div class="g-overlay"><div class="g-overlay-txt">Mercedes C-Class<small>Prestige Series</small></div></div>
-      </figure>
- 
+      <!-- <figure class="g-item"><img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&q=80" alt="BMW M4" loading="lazy"><div class="g-overlay"><div class="g-overlay-txt">BMW M4<small>Sport Collection</small></div></div></figure> -->
+      <figure class="g-item"><img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&q=80" alt="BMW 3 Series" loading="lazy"><div class="g-overlay"><div class="g-overlay-txt">BMW 3 Series<small>Executive Sedan</small></div></div></figure>
+      <figure class="g-item"><img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=900&q=80" alt="Honda CR-V" loading="lazy"><div class="g-overlay"><div class="g-overlay-txt">Honda CR-V<small>Family SUV</small></div></div></figure>
+      <figure class="g-item"><img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=900&q=80" alt="Premium Sedan" loading="lazy"><div class="g-overlay"><div class="g-overlay-txt">Premium Sedan<small>Luxury Line</small></div></div></figure>
+      <figure class="g-item"><img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=900&q=80" alt="Lexus RX" loading="lazy"><div class="g-overlay"><div class="g-overlay-txt">Lexus RX<small>Flagship SUV</small></div></div></figure>
+      <figure class="g-item"><img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=900&q=80" alt="Mercedes C-Class" loading="lazy"><div class="g-overlay"><div class="g-overlay-txt">Mercedes C-Class<small>Prestige Series</small></div></div></figure>
     </div>
-    <!-- ═══ END GALLERY DATA ═══ -->
   </div>
 </section>
- 
- 
+
+
 <!-- TESTIMONIALS -->
 <section id="testimonials">
   <div class="testi-container">
@@ -362,134 +223,33 @@
       <div class="sec-tag" style="justify-content:center;"><div class="tl"></div><span class="tt">Client Reviews</span><div class="tl"></div></div>
       <h2 class="sec-title">What Clients <span class="red">Say</span></h2>
     </div>
- 
-    <!--
-      ═══════════════════════════════════════════════
-      TESTIMONIALS — All reviews live here in HTML.
-      Add a review: copy one .tcard block.
-      ═══════════════════════════════════════════════
-    -->
     <div class="testi-grid">
- 
-      <div class="tcard">
-        <div class="tcard-quote">"</div>
-        <div class="tcard-stars">★★★★★</div>
-        <p class="tcard-text">Alex made buying my first car completely stress-free. He walked me through every option with patience and zero pressure. Got a fantastic deal on my Fortuner!</p>
-        <div class="tcard-person">
-          <div class="tcard-avatar">MR</div>
-          <div>
-            <div class="tcard-name">Maria Reyes</div>
-            <div class="tcard-sub">Iloilo City</div>
-            <div class="tcard-car">Toyota Fortuner 2024</div>
-          </div>
-        </div>
-      </div>
- 
-      <div class="tcard">
-        <div class="tcard-quote">"</div>
-        <div class="tcard-stars">★★★★★</div>
-        <p class="tcard-text">I came with a strict budget and a wish list. Alex delivered on both. His product knowledge is exceptional and the BMW I got is exactly what I wanted.</p>
-        <div class="tcard-person">
-          <div class="tcard-avatar">JD</div>
-          <div>
-            <div class="tcard-name">Jose Dela Cruz</div>
-            <div class="tcard-sub">Bacolod City</div>
-            <div class="tcard-car">BMW 3 Series 2023</div>
-          </div>
-        </div>
-      </div>
- 
-      <div class="tcard">
-        <div class="tcard-quote">"</div>
-        <div class="tcard-stars">★★★★★</div>
-        <p class="tcard-text">Third car I've bought through Alex — there's a reason I keep coming back. Honest, fast, and always finds the best financing. My Lexus RX is immaculate.</p>
-        <div class="tcard-person">
-          <div class="tcard-avatar">AL</div>
-          <div>
-            <div class="tcard-name">Ana Lim</div>
-            <div class="tcard-sub">Cebu City</div>
-            <div class="tcard-car">Lexus RX 350 2024</div>
-          </div>
-        </div>
-      </div>
- 
-      <div class="tcard">
-        <div class="tcard-quote">"</div>
-        <div class="tcard-stars">★★★★★</div>
-        <p class="tcard-text">From inquiry to delivery, Alex handled everything professionally. The Honda CR-V is perfect for my family. Couldn't ask for a better experience.</p>
-        <div class="tcard-person">
-          <div class="tcard-avatar">RC</div>
-          <div>
-            <div class="tcard-name">Ramon Cruz</div>
-            <div class="tcard-sub">Iloilo City</div>
-            <div class="tcard-car">Honda CR-V 2024</div>
-          </div>
-        </div>
-      </div>
- 
-      <div class="tcard">
-        <div class="tcard-quote">"</div>
-        <div class="tcard-stars">★★★★★</div>
-        <p class="tcard-text">Alex went above and beyond to find me the right Mercedes at the right price. Transparent, respectful, and zero games. Highly recommend him.</p>
-        <div class="tcard-person">
-          <div class="tcard-avatar">SB</div>
-          <div>
-            <div class="tcard-name">Sophia Bautista</div>
-            <div class="tcard-sub">Manila</div>
-            <div class="tcard-car">Mercedes C-Class 2022</div>
-          </div>
-        </div>
-      </div>
- 
-      <div class="tcard">
-        <div class="tcard-quote">"</div>
-        <div class="tcard-stars">★★★★★</div>
-        <p class="tcard-text">Alex broke down the financing clearly and got me approved fast. My Montero Sport is everything I dreamed of. Will definitely refer my friends!</p>
-        <div class="tcard-person">
-          <div class="tcard-avatar">EP</div>
-          <div>
-            <div class="tcard-name">Edwin Pascual</div>
-            <div class="tcard-sub">Roxas City</div>
-            <div class="tcard-car">Mitsubishi Montero Sport 2024</div>
-          </div>
-        </div>
-      </div>
- 
+      <!-- <div class="tcard"><div class="tcard-quote">"</div><div class="tcard-stars">★★★★★</div><p class="tcard-text">Ian made buying my first car completely stress-free. He walked me through every option with patience and zero pressure. Got a fantastic deal on my Fortuner!</p><div class="tcard-person"><div class="tcard-avatar">MR</div><div><div class="tcard-name">Maria Reyes</div><div class="tcard-sub">Iloilo City</div><div class="tcard-car">Toyota Fortuner 2024</div></div></div></div> -->
+      <div class="tcard"><div class="tcard-quote">"</div><div class="tcard-stars">★★★★★</div><p class="tcard-text">I came with a strict budget and a wish list. Ian delivered on both. His product knowledge is exceptional and the BMW I got is exactly what I wanted.</p><div class="tcard-person"><div class="tcard-avatar">JD</div><div><div class="tcard-name">Jose Dela Cruz</div><div class="tcard-sub">Bacolod City</div><div class="tcard-car">BMW 3 Series 2023</div></div></div></div>
+      <div class="tcard"><div class="tcard-quote">"</div><div class="tcard-stars">★★★★★</div><p class="tcard-text">Third car I've bought through Ian — there's a reason I keep coming back. Honest, fast, and always finds the best financing. My Lexus RX is immaculate.</p><div class="tcard-person"><div class="tcard-avatar">AL</div><div><div class="tcard-name">Ana Lim</div><div class="tcard-sub">Cebu City</div><div class="tcard-car">Lexus RX 350 2024</div></div></div></div>
+      <div class="tcard"><div class="tcard-quote">"</div><div class="tcard-stars">★★★★★</div><p class="tcard-text">From inquiry to delivery, Ian handled everything professionally. The Honda CR-V is perfect for my family. Couldn't ask for a better experience.</p><div class="tcard-person"><div class="tcard-avatar">RC</div><div><div class="tcard-name">Ramon Cruz</div><div class="tcard-sub">Iloilo City</div><div class="tcard-car">Honda CR-V 2024</div></div></div></div>
+      <div class="tcard"><div class="tcard-quote">"</div><div class="tcard-stars">★★★★★</div><p class="tcard-text">Ian went above and beyond to find me the right Mercedes at the right price. Transparent, respectful, and zero games. Highly recommend him.</p><div class="tcard-person"><div class="tcard-avatar">SB</div><div><div class="tcard-name">Sophia Bautista</div><div class="tcard-sub">Manila</div><div class="tcard-car">Mercedes C-Class 2022</div></div></div></div>
+      <div class="tcard"><div class="tcard-quote">"</div><div class="tcard-stars">★★★★★</div><p class="tcard-text">Ian broke down the financing clearly and got me approved fast. My Montero Sport is everything I dreamed of. Will definitely refer my friends!</p><div class="tcard-person"><div class="tcard-avatar">EP</div><div><div class="tcard-name">Edwin Pascual</div><div class="tcard-sub">Roxas City</div><div class="tcard-car">Mitsubishi Montero Sport 2024</div></div></div></div>
     </div>
-    <!-- ═══ END TESTIMONIALS ═══ -->
   </div>
 </section>
- 
- 
+
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact-container">
     <div class="contact-grid">
- 
       <div class="contact-left">
         <div class="sec-tag"><div class="tl"></div><span class="tt">Let's Connect</span></div>
-        <h2 class="sec-title light">Ready to Find Your <span class="red">Dream Car?</span></h2>
-        <p class="sec-desc">Send a message and Alex will respond personally — usually within the hour.</p>
+        <h2 class="sec-title">Ready to Find Your <span class="red">Dream Car?</span></h2>
+        <p class="sec-desc">Send a message and Ian will respond personally — usually within the hour.</p>
         <div style="margin-top:32px;">
-          <div class="cinfo-item">
-            <div class="cinfo-icon"><i class="fas fa-phone-alt"></i></div>
-            <div><div class="cinfo-label">Call / Viber / WhatsApp</div><div class="cinfo-val">+63 912 345 6789</div></div>
-          </div>
-          <div class="cinfo-item">
-            <div class="cinfo-icon"><i class="fas fa-envelope"></i></div>
-            <div><div class="cinfo-label">Email</div><div class="cinfo-val">alex@autoelite.ph</div></div>
-          </div>
-          <div class="cinfo-item">
-            <div class="cinfo-icon"><i class="fab fa-facebook-f"></i></div>
-            <div><div class="cinfo-label">Facebook</div><div class="cinfo-val">Alex Rivera Auto Sales</div></div>
-          </div>
-          <div class="cinfo-item">
-            <div class="cinfo-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div><div class="cinfo-label">Location</div><div class="cinfo-val">Iloilo City, Philippines</div></div>
-          </div>
+          <div class="cinfo-item"><div class="cinfo-icon"><i class="fas fa-phone-alt"></i></div><div><div class="cinfo-label">Call / Viber / WhatsApp</div><div class="cinfo-val">+639399655525</div></div></div>
+          <div class="cinfo-item"><div class="cinfo-icon"><i class="fas fa-envelope"></i></div><div><div class="cinfo-label">Email</div><div class="cinfo-val">email@emal</div></div></div>
+          <div class="cinfo-item"><div class="cinfo-icon"><i class="fab fa-facebook-f"></i></div><div><div class="cinfo-label">Facebook</div><div class="cinfo-val">Ian Lopez Capuyan Auto Sales</div></div></div>
+          <div class="cinfo-item"><div class="cinfo-icon"><i class="fas fa-map-marker-alt"></i></div><div><div class="cinfo-label">Location</div><div class="cinfo-val">Bacolod City, Philippines</div></div></div>
         </div>
       </div>
- 
       <div class="cf-box carbon">
         <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.8rem;font-weight:800;text-transform:uppercase;letter-spacing:-1px;color:var(--white);margin-bottom:24px;position:relative;z-index:1;">Send a Message</h3>
         <div class="cf-row">
@@ -506,32 +266,27 @@
             <option>Mercedes-Benz</option><option>Lexus</option><option>Not sure yet</option>
           </select>
         </div>
-        <div class="cf-group"><label>Your Message *</label><textarea class="cf-inp" id="cfMsg" rows="4" placeholder="Tell Alex what you're looking for — model, budget, or any questions..."></textarea></div>
+        <div class="cf-group"><label>Your Message *</label><textarea class="cf-inp" id="cfMsg" rows="4" placeholder="Tell Ian what you're looking for — model, budget, or any questions..."></textarea></div>
         <button class="btn-submit-cf" onclick="submitCF()"><i class="fas fa-paper-plane"></i> Send Message</button>
         <div id="cf-msg"></div>
       </div>
- 
     </div>
   </div>
 </section>
- 
- 
+
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="fl">
-          <span class="logo-icon-sm"></span>
-          Alex<em>Rivera</em>
-        </div>
+        <div class="fl"><span class="logo-icon-sm"></span>Ian<em>Capuyan</em></div>
         <p>Your trusted auto sales professional in Iloilo, connecting drivers to their perfect machine since 2012.</p>
       </div>
       <div class="footer-col">
         <h5>Navigate</h5>
         <a href="#hero">Home</a>
         <a href="#showroom">Inventory</a>
-        <a href="#calculator">Financing</a>
         <a href="#gallery">Gallery</a>
         <a href="#testimonials">Reviews</a>
         <a href="#contact">Contact</a>
@@ -547,7 +302,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Alex Rivera Auto Sales. All rights reserved.</p>
+      <p>© 2025 Ian Lopez Capuyan Auto Sales. All rights reserved.</p>
       <div class="socials">
         <a href="#" class="soc"><i class="fab fa-facebook-f"></i></a>
         <a href="#" class="soc"><i class="fab fa-instagram"></i></a>
@@ -557,23 +312,21 @@
     </div>
   </div>
 </footer>
- 
- 
+
+
 <!-- CHATBOT -->
 <div class="chat-fab">
   <div class="chat-win" id="chatWin">
     <div class="chat-head">
       <div class="chat-head-av">A</div>
       <div class="chat-head-info">
-        <div class="cname">Alex's Assistant</div>
+        <div class="cname">Ian's Assistant</div>
         <div class="cstatus">Online now</div>
       </div>
       <button class="chat-close-btn" onclick="toggleChat()"><i class="fas fa-times"></i></button>
     </div>
     <div class="chat-msgs" id="chatMsgs">
-      <div class="cmsg bot">
-        <div class="cmsg-bub">👋 Hi! I'm Alex's assistant. Looking for a specific car, need pricing info, or want to book a test drive? I'm here to help!</div>
-      </div>
+      <div class="cmsg bot"><div class="cmsg-bub">👋 Hi! I'm Ian's assistant. Looking for a specific car, need pricing info, or want to book a test drive? I'm here to help!</div></div>
     </div>
     <div class="chat-quick-btns" id="cqBtns">
       <button class="cq-btn" onclick="cqReply('Show me SUVs')">🚙 SUVs</button>
@@ -591,6 +344,7 @@
     <i class="fas fa-comments" id="chatIco"></i>
   </button>
 </div>
+
  
 
 <!-- ════════ SCRIPTS ════════ -->
