@@ -61,37 +61,40 @@
 
 <!-- HERO — full bleed background image -->
 <section id="hero">
-  <!-- Background: replace the URL below with your friend's actual photo -->
-  <div class="hero-bg"></div>
+  <!-- ✅ Use a real <img> tag — replace src with your actual photo path -->
+  <div class="hero-bg">
+    <img src="./img/bg.jpg" alt="Ian Capuyan – Premium Auto Sales" />
+  </div>
+ 
   <div class="hero-overlay"></div>
   <div class="hero-overlay-bottom"></div>
   <div class="hero-underglow"></div>
   <div class="hero-speedlines"></div>
-
+ 
   <div class="hero-inner">
     <div class="hero-text">
       <div class="hero-tag">
         <div class="tag-line"></div>
         <span class="tag-text">Premium Auto Sales · Iloilo, PH</span>
       </div>
-
+ 
       <h1 class="hero-title">
         Meet<br>
         <span class="red italic">Ian</span><br>
         Capuyan
       </h1>
-
+ 
       <p class="hero-subtitle">Certified Sales Professional &nbsp;·&nbsp; 8 Brands</p>
-
+ 
       <div class="hero-rule">
         <div class="line"></div>
         <div class="dot"></div>
       </div>
-
+ 
       <p class="hero-body">
         With over <strong>12 years behind the wheel</strong> of premium auto sales, Ian connects drivers to their perfect machine — from rugged family SUVs to luxury performance sedans. <strong>No pressure. Pure expertise.</strong>
       </p>
-
+ 
       <div class="hero-stats">
         <div class="stat">
           <div class="stat-num"><span data-count="500">0</span><sup>+</sup></div>
@@ -106,24 +109,45 @@
           <div class="stat-label">Years Exp.</div>
         </div>
       </div>
-
+ 
       <div class="hero-btns">
         <a href="#showroom" class="btn-red"><i class="fas fa-car"></i> Browse Cars</a>
         <a href="#contact" class="btn-ghost"><i class="fas fa-phone-alt"></i> Get in Touch</a>
       </div>
-    </div>
-  </div>
-
-  <!-- Floating verified badge — always visible regardless of screen size -->
-  <div class="hero-badge">
-    <div class="vb-icon"><i class="fas fa-shield-alt"></i></div>
-    <div class="vb-text">
-      <div class="vb-num">Verified</div>
-      <div class="vb-lbl">Certified Dealer</div>
+ 
+      <!-- Badge moved inside hero-text flow on mobile via CSS -->
+      <div class="hero-badge">
+        <div class="vb-icon"><i class="fas fa-shield-alt"></i></div>
+        <div class="vb-text">
+          <div class="vb-num">Verified</div>
+          <div class="vb-lbl">Certified Dealer</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
+ 
+<script>
+  // Counter animation
+  const counters = document.querySelectorAll('[data-count]');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = +el.dataset.count;
+      const duration = 1400;
+      const step = target / (duration / 16);
+      let current = 0;
+      const timer = setInterval(() => {
+        current = Math.min(current + step, target);
+        el.textContent = Math.floor(current);
+        if (current >= target) clearInterval(timer);
+      }, 16);
+      observer.unobserve(el);
+    });
+  }, { threshold: 0.3 });
+  counters.forEach(c => observer.observe(c));
+</script>
 
 <!-- SHOWROOM -->
 <section id="showroom">

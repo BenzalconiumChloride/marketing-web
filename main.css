@@ -97,33 +97,31 @@ a, button { cursor: pointer; }
 }
 .mob-menu a:hover {color:var(--red);}
 
-/* ─── HERO — Full bleed background image ─── */
+/* ─── HERO ─── */
 #hero {
-  min-height: 100vh;
   position: relative;
+  width: 100%;
+  min-height: 100svh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   overflow: hidden;
 }
 
-/* The background image covers the entire hero */
 .hero-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url('./img/bg.jpg');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  /* Slight zoom-in animation on load */
-  animation: heroBgZoom 12s ease-out forwards;
-}
-@keyframes heroBgZoom {
-  from { transform: scale(1.08); }
-  to   { transform: scale(1.0); }
 }
 
-/* Dark gradient overlay — heavier on the left for text readability, lighter on the right to show the person */
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  display: block;
+}
+
+/* Dark gradient overlay */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -137,7 +135,7 @@ a, button { cursor: pointer; }
   );
 }
 
-/* Bottom fade for transition into next section */
+/* Bottom fade */
 .hero-overlay-bottom {
   position: absolute;
   bottom: 0; left: 0; right: 0;
@@ -146,7 +144,7 @@ a, button { cursor: pointer; }
   background: linear-gradient(to top, var(--black), transparent);
 }
 
-/* Red underglow accent */
+/* Red underglow */
 .hero-underglow {
   position: absolute;
   bottom: 0; left: 0; right: 0; height: 200px;
@@ -154,7 +152,7 @@ a, button { cursor: pointer; }
   z-index: 2;
 }
 
-/* Speed lines (subtle, layered over image) */
+/* Speed lines */
 .hero-speedlines {
   position: absolute; inset:0; z-index:2; overflow:hidden; pointer-events:none;
 }
@@ -173,7 +171,6 @@ a, button { cursor: pointer; }
   display:flex; align-items:center;
 }
 
-/* Left text */
 .hero-text { padding-top:70px; max-width:580px; }
 
 .hero-tag {
@@ -241,13 +238,11 @@ a, button { cursor: pointer; }
   font-family:'Rajdhani',sans-serif;font-size:.9rem;font-weight:600;letter-spacing:2px;
   text-transform:uppercase;text-decoration:none;cursor:pointer;
   transition:border-color .2s,color .2s,background .2s;
-  /* Frosted glass effect on the ghost button for the image bg */
   backdrop-filter: blur(8px);
   background: rgba(255,255,255,0.05);
 }
 .btn-ghost:hover {border-color:var(--red);color:var(--white);background:rgba(232,25,44,0.1);}
 
-/* Verified badge floating bottom-left over hero */
 .hero-badge {
   position:absolute; bottom:40px; left:60px; z-index:4;
   background:rgba(22,24,32,0.85);backdrop-filter:blur(12px);
@@ -326,8 +321,6 @@ a, button { cursor: pointer; }
 .spl-brand {font-family:'Rajdhani',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:8px;}
 .spl-model {font-family:'Barlow Condensed',sans-serif;font-size:2.8rem;font-weight:800;text-transform:uppercase;letter-spacing:-1px;color:var(--white);line-height:.95;margin-bottom:6px;}
 .spl-year {font-size:.85rem;color:var(--dim);margin-bottom:24px;font-family:'Rajdhani',sans-serif;letter-spacing:2px;}
-
-/* Simplified specs — just 2 key facts */
 .spl-specs {display:flex;gap:10px;margin-bottom:28px;flex-wrap:wrap;}
 .spl-spec {
   background:rgba(255,255,255,0.04);border:1px solid var(--border);
